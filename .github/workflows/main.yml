@@ -24,7 +24,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          wget https://talonvoice.com/dl/latest/talon-mac.dmg
+          wget -q https://talonvoice.com/dl/latest/talon-mac.dmg
           sudo hdiutil attach talon-mac.dmg
           sudo cp -R /Volumes/Talon/Talon.app /Applications
           sudo hdiutil unmount  /Volumes/Talon
@@ -32,5 +32,5 @@ jobs:
           open /Applications/Talon.app
           sleep 20
           ps uax | grep Talon
-          ls ~/.talon/
+          ls ~/
   
