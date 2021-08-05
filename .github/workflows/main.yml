@@ -27,6 +27,8 @@ jobs:
           wget https://talonvoice.com/dl/latest/talon-mac.dmg
           sudo hdiutil attach talon-mac.dmg
           sudo cp -R /Volumes/Talon/Talon.app /Applications
+          open -a Talon
+          sleep 20
           sudo hdiutil unmount  /Volumes/Talon
           sudo xattr -d -r com.apple.quarantine /Applications/Talon.app
           ps uax | grep Talon
