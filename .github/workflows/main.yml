@@ -32,4 +32,5 @@ jobs:
           open /Applications/Talon.app
           sleep 20
           ps uax | grep Talon
+          cat ~/.talon/*.log
   
