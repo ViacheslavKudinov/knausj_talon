@@ -30,7 +30,8 @@ jobs:
           sudo hdiutil unmount  /Volumes/Talon
           sudo xattr -d -r com.apple.quarantine /Applications/Talon.app
           open /Applications/Talon.app
-          sleep 20
+          sleep 40
           ps uax | grep Talon
           ls -la ~/
+          cat ~/Library/Logs/*
   
