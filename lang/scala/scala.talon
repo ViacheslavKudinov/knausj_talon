@@ -15,7 +15,6 @@ tag(): user.code_operators_bitwise
 tag(): user.code_operators_lambda
 tag(): user.code_operators_math
 
-
 settings():
     user.code_private_function_formatter = "PRIVATE_CAMEL_CASE"
     user.code_protected_function_formatter = "PRIVATE_CAMEL_CASE"
@@ -24,16 +23,17 @@ settings():
     user.code_protected_variable_formatter = "PRIVATE_CAMEL_CASE"
     user.code_public_variable_formatter = "PRIVATE_CAMEL_CASE"
 
-state package: "package "
+state {user.scala_modifier}: insert("{user.scala_modifier} ")
 
-state val: "val "
-state var: "var "
+state {user.scala_keyword}: insert("{scala_keyword} ")
+
+op right arrow: " -> "
+op left arrow: " <- "
+op plus plus: " ++ "
+op subtype: " <: "
 
 state match: user.code_state_switch()
 
-state case class: "case class "
-state object: "object "
-
 block string:
-  insert('""""""')
-  key("left left left")
+    insert('""""""')
+    key("left left left")
